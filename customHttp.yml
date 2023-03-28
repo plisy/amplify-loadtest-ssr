@@ -3,6 +3,14 @@ customHeaders:
     headers:
       - key: 'Test'
         value: 'true'
+  - pattern: '/api/custom-headers'
+    headers:
+      - key: 'Test'
+        value: 'true'
+  - pattern: '/api/custom-headers/**'
+    headers:
+      - key: 'Test'
+        value: 'true'
   - pattern: '/custom-headers/**'
     headers:
       - key: 'Test'
