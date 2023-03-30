@@ -6,8 +6,10 @@ frontend:
         - npm ci
     build:
       commands:
-        - head -c 512000 </dev/urandom >public/file-500.txt
-        - head -c 5242880 </dev/urandom >public/file-5000.txt
+        - mkdir -p public/files/
+        - head -c 512000 </dev/urandom >public/files/file-500.txt
+        - head -c 4511276 </dev/urandom >public/files/file-4511276.txt
+        - head -c 5242880 </dev/urandom >public/files/file-5000.txt
         - npm run build
   artifacts:
     baseDirectory: .next
